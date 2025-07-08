@@ -1,7 +1,7 @@
 
     :root {
-      --btn-accept-text-color: #3e2723;
-      --btn-accept-background-color: #03a9f4;
+      --btn-accept-text-color: #f2f2f2;
+      --btn-accept-background-color: #5249EB;
 
       --btn-accept-all-text-color: #f2f2f2;
       --btn-accept-all-background-color: #5249EB;
@@ -9,18 +9,18 @@
       --btn-accept-selected-text-color: #5249EB;
       --btn-accept-selected-background-color: #fff0;
 
-      --btn-ok-text-color: #3e2723;
-      --btn-ok-background-color: #03a9f4;
+      --btn-ok-text-color: #f2f2f2;
+      --btn-ok-background-color: #5249EB;
 
-      --btn-decline-text-color: #f44336;
-      --btn-decline-background-color: #00bcd4;
+      --btn-decline-text-color: #7879A1;
+      --btn-decline-background-color: #fff0;
 
       --btn-learn-more-text-color: #5249EB;
 
       --banner-body-text-color: #43436c;
       --banner-body-background-color: #fafafa;
 
-      --overlay-body-text-color: #f44336;
+      --overlay-body-text-color: #43436c;
       --overlay-body-background-color: #f9f9ff;
       --overlay-position-left: auto;    
       --overlay-position-Top: auto;    
