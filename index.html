@@ -9,6 +9,20 @@
     <link rel="stylesheet" href="seqrite-config.css"/>
   </head>
   <body>
+    <!-- User Info Block (separate, above consent) -->
+    <div class="user-info-block">
+      <div class="user-info-row">
+        <input type="text" id="inputFirstName" name="firstName" placeholder="First name" class="user-input" required>
+        <input type="text" id="inputLastName" name="lastName" placeholder="Last name" class="user-input" required>
+      </div>
+      <div class="user-info-row">
+        <input type="email" id="inputEmail" name="email" placeholder="Email" class="user-input" required>
+      </div>
+      <div class="user-info-row">
+        <input type="text" id="inputPhone" name="phone" placeholder="Phone" class="user-input">
+        <input type="text" id="inputAddress" name="address" placeholder="Address" class="user-input">
+      </div>
+    </div>
     <div class="consent">
       <div class="card">
         <div class="logo-language-wrapper">
@@ -23,20 +37,6 @@
           <div class="logo-container center">
             <img src="https://qa-hs.qhtpl.com/cpm-api/upload/v1/fileDownloads?fileUrl=hdfs://sdp-hdfs-namenode.hdfs.svc.cluster.local:9820/jars/1750838411997_logo.png" class="logo">
             <span class="company-name" data-translate="companyName">Quick Heal</span>
-          </div>
-        </div>
-        <!-- User Info -->
-        <div class="user-info-block">
-          <div class="user-info-row">
-            <input type="text" id="inputFirstName" name="firstName" placeholder="First name" class="user-input" required>
-            <input type="text" id="inputLastName" name="lastName" placeholder="Last name" class="user-input" required>
-          </div>
-          <div class="user-info-row">
-            <input type="email" id="inputEmail" name="email" placeholder="Email" class="user-input" required>
-          </div>
-          <div class="user-info-row">
-            <input type="text" id="inputPhone" name="phone" placeholder="Phone" class="user-input">
-            <input type="text" id="inputAddress" name="address" placeholder="Address" class="user-input">
           </div>
         </div>
         <!-- Permissions -->
@@ -147,7 +147,7 @@
         a.appendChild(r);
       })(window,document,'https://static.hotjar.com/c/hotjar-','.js?sv=');
     </script>
-  <script data-config="seqriteConfig" type="application/javascript" src="seqrite.js"></script>
-  <script type="application/javascript" src="seqrite-config.js"></script>
+    <script data-config="seqriteConfig" type="application/javascript" src="seqrite.js"></script>
+    <script type="application/javascript" src="seqrite-config.js"></script>
   </body>
 </html>
