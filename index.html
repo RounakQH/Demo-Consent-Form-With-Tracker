@@ -1,139 +1,115 @@
 <!DOCTYPE html>
 <html lang="english">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorem Ipsum Technologies - Consent Form</title>
-  <link rel="stylesheet" href="styles.css">
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="seqrite-config.css"/>
-</head>
-<body>
-<div class="consent">
-  <div class="card">
-    <div class="logo-language-wrapper">
-      <div class="language-selector">
-        <select id="languageDropdown" class="styled-select">
-        <option value="english">English</option><option value="hindi">Hindi</option><option value="marathi">Marathi</option>
-        </select>
-      </div>
-
-      <div class="logo-container left">
-        <img src="https://demo-shp.qhtpl.com/cpm-api/upload/v1/fileDownloads?fileUrl=hdfs://sdp-hdfs-namenode.hdfs.svc.cluster.local:9820/jars/1749708737749_cropped_image.png" class="logo">
-        <span class="company-name" data-translate="companyName">Lorem Ipsum Technologies</span>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quick Heal - Consent Form</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="seqrite-config.css"/>
+  </head>
+  <body>
+    <div class="consent">
+      <div class="card">
+        <div class="logo-language-wrapper">
+          <div class="language-selector">
+            <select id="languageDropdown">
+              <option value="english">English</option>
+              <option value="telugu">Telugu</option>
+              <option value="gujarati">Gujarati</option>
+              <option value="nepali">Nepali</option>
+            </select>
+          </div>
+          <div class="logo-container center">
+            <img src="https://qa-hs.qhtpl.com/cpm-api/upload/v1/fileDownloads?fileUrl=hdfs://sdp-hdfs-namenode.hdfs.svc.cluster.local:9820/jars/1750838411997_logo.png" class="logo">
+            <span class="company-name" data-translate="companyName">Quick Heal</span>
+          </div>
+        </div>
+        <!-- User Info -->
+        <div class="user-info-block">
+          <div class="user-info-row">
+            <input type="text" id="inputFirstName" name="firstName" placeholder="First name" class="user-input" required>
+            <input type="text" id="inputLastName" name="lastName" placeholder="Last name" class="user-input" required>
+          </div>
+          <div class="user-info-row">
+            <input type="email" id="inputEmail" name="email" placeholder="Email" class="user-input" required>
+          </div>
+          <div class="user-info-row">
+            <input type="text" id="inputPhone" name="phone" placeholder="Phone" class="user-input">
+            <input type="text" id="inputAddress" name="address" placeholder="Address" class="user-input">
+          </div>
+        </div>
+        <!-- Permissions -->
+        <div id="permissions">
+          <div class="permission-block">
+            <p data-translate-text="686ce318208471114aa794e4">
+              <p><strong>I am agree with following terms and condition.</strong></p> <span class="mandatory">*</span>
+            </p>
+            <label class="radio-label">
+              <input type="radio" name="686ce318208471114aa794e4" value="I accept the Terms and Conditions" data-translate-option="686ce318208471114aa794e4"> I accept the Terms and Conditions
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="686ce318208471114aa794e4" value="I agree to receive email updates" data-translate-option="686ce318208471114aa794e4"> I agree to receive email updates
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="686ce318208471114aa794e4" value="I Reject the Terms and Conditions" data-translate-option="686ce318208471114aa794e4"> I Reject the Terms and Conditions
+            </label>
+          </div>
+          <div class="permission-block">
+            <p data-translate-text="686ce318208471114aa794e5">
+              <p><strong>select below option:</strong></p>
+            </p>
+            <label class="checkbox-label">
+              <input type="checkbox" name="686ce318208471114aa794e5" value="Email" data-translate-option="686ce318208471114aa794e5"> Email
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="686ce318208471114aa794e5" value="Phone" data-translate-option="686ce318208471114aa794e5"> Phone
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="686ce318208471114aa794e5" value="SMS" data-translate-option="686ce318208471114aa794e5"> SMS
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" name="686ce318208471114aa794e5" value="None Of the Above" data-translate-option="686ce318208471114aa794e5"> None Of the Above
+            </label>
+          </div>
+          <div class="permission-block">
+            <p data-translate-text="686ce318208471114aa794e6">
+              <p><strong>Do you give consent to share your information?</strong></p>
+            </p>
+            <select class="dropdown" name="686ce318208471114aa794e6" data-translate-dropdown="686ce318208471114aa794e6">
+              <option value="Yes">Yes</option>
+              <option value="No">No</option>
+            </select>
+          </div>
+        </div>
+        <div id="error-message" class="error-message"></div>
+        <div id="toast" style="
+          visibility: hidden;
+          min-width: 175px;
+          margin-left: -125px;
+          background-color: #333;
+          color: #fff;
+          text-align: center;
+          border-radius: 4px;
+          padding: 16px;
+          position: fixed;
+          z-index: 1000;
+          right:10px;
+          top:10px;
+          font-size: 12px;
+        "></div>
+        <!-- Buttons -->
+        <div class="button-group">
+          <button type="button" class="cancel" data-translate="cancelBtn">
+            Reject
+          </button>
+          <button type="submit" class="submit" id="submitButton" data-translate="submitBtn">
+            Submit
+          </button>
+        </div>
       </div>
     </div>
-
-    <!-- Permissions -->
-    <div id="permissions">
-      
-          <div class="permission-block">
-            <p data-translate-text="684a70d3be761974ae478e9d" style="display: flex; margin-top: 10px;">Would you like to receive email updates from us?<span class="mandatory">*</span></p>
-            
-            <label class="radio-label">
-              <input class="radio-text font-14" type="radio" name="684a70d3be761974ae478e9d" value="Yes, send me all updates, promotional emails and newsletters" data-translate-option="684a70d3be761974ae478e9d"><span class="radio-tex">Yes, send me all updates, promotional emails and newsletters</span>
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9d" value="Only send me important updates (e.g., account notices)" data-translate-option="684a70d3be761974ae478e9d"> Only send me important updates (e.g., account notices)
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9d" value="No, I do not want to receive any emails" data-translate-option="684a70d3be761974ae478e9d"> No, I do not want to receive any emails
-            </label>
-          
-          </div>
-        
-          <div class="permission-block">
-            <p data-translate-text="684a70d3be761974ae478e9e" class="d-flex mt-1">Do you agree to receive personalised ads based on your data? <span class="mandatory">*</span></p>
-            
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9e" value="Yes, personalize my ads and content" data-translate-option="684a70d3be761974ae478e9e"> Yes, personalize my ads and content
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9e" value="Only use limited data for non personalized ads" data-translate-option="684a70d3be761974ae478e9e"> Only use limited data for non personalized ads
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9e" value="No, do not use my data for advertising" data-translate-option="684a70d3be761974ae478e9e"> No, do not use my data for advertising
-            </label>
-          
-          </div>
-        
-          <div class="permission-block">
-            <p data-translate-text="684a70d3be761974ae478e9f" class="d-flex mt-1">What level of data collection are you comfortable with? <span class="mandatory">*</span></p>
-            
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9f" value="Full consent – collect and store all relevant data" data-translate-option="684a70d3be761974ae478e9f"> Full consent – collect and store all relevant data
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9f" value="Limited consent – only store what's needed for requested service" data-translate-option="684a70d3be761974ae478e9f"> Limited consent – only store what's needed for requested service
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478e9f" value="No consent – do not store my data beyond this session" data-translate-option="684a70d3be761974ae478e9f"> No consent – do not store my data beyond this session
-            </label>
-          
-          </div>
-        
-          <div class="permission-block">
-            <p data-translate-text="684a70d3be761974ae478ea0" class="d-flex mt-1"><span>Can we share your data with our trusted partners?</span><span class="mandatory">*</span></p>
-            
-            <label class="radio-label">
-              <input class="form-check-input" type="radio" name="684a70d3be761974ae478ea0"  data-translate-option="684a70d3be761974ae478ea0"> Yes, share with third parties for offers and promotions
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478ea0" value="Only share with partners necessary for providing required service" data-translate-option="684a70d3be761974ae478ea0"> Only share with partners necessary for providing required service
-            </label>
-          
-            <label class="radio-label">
-              <input type="radio" name="684a70d3be761974ae478ea0" value="Do not share my data with any third parties" data-translate-option="684a70d3be761974ae478ea0"> Do not share my data with any third parties
-            </label>
-          
-          </div>
-        
-    </div>
-
-    <div id="error-message" class="error-message"></div>
-
-     <div id="toast" style="
-      visibility: hidden;
-      min-width: 175px;
-      margin-left: -125px;
-      background-color: #333;
-      color: #fff;
-      text-align: center;
-      border-radius: 4px;
-      padding: 16px;
-      position: fixed;
-      z-index: 1000;
-      right:10px;
-      top:10px;
-      font-size: 12px;
-    "></div>
-
-
-    <!-- Buttons -->
-    <div class="button-group">
-<ul class="list-inline wizard mb-0">
-  <button type="button" class="cancel-btn" data-translate="cancelBtn"
-  >
-  Cancel
-</button>
- 
-<button type="submit" class="btn-primary" id="submitButton" data-translate="submitBtn"
-  >
-  Submit
-</button>
-</ul>
-</div>
-
-  </div>
-</div>
-  <script src="script.js"></script>
+    <script src="script.js"></script>
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-12345678-1"></script>
     <script>
@@ -142,7 +118,6 @@
       gtag('js', new Date());
       gtag('config', 'UA-12345678-1');
     </script>
-
     <!-- Facebook Pixel -->
     <script>
       !function(f,b,e,v,n,t,s){
@@ -161,7 +136,6 @@
       <img height="1" width="1" style="display:none"
            src="https://www.facebook.com/tr?id=123456789012345&ev=PageView&noscript=1"/>
     </noscript>
-
     <!-- Hotjar Tracking Code -->
     <script>
       (function(h,o,t,j,a,r){
@@ -175,6 +149,5 @@
     </script>
     <script data-config="seqriteConfig" type="application/javascript" src="seqrite.js"></script>
     <script type="application/javascript" src="seqrite-config.js"></script>
-
-</body>
+  </body>
 </html>

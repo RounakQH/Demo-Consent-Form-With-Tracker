@@ -1,197 +1,7 @@
-
 document.addEventListener("DOMContentLoaded", function () {
-  const branding = {"id":"684a6ff0be761974ae478e8e","name":"Demo Site","description":"","logo":"https://demo-shp.qhtpl.com/cpm-api/upload/v1/fileDownloads?fileUrl=hdfs://sdp-hdfs-namenode.hdfs.svc.cluster.local:9820/jars/1749708737749_cropped_image.png","companyName":"Lorem Ipsum Technologies","logoAlignment":"left","headerFontFamily":"Arial","headerFontSize":"Normal","headerFontColor":"#A5A7C7","headerFontStyle":null,"primaryButtonLabel":"Submit","primaryFontSize":null,"primaryFontStyle":null,"primaryFontColor":"#FFFFFF","primaryButtonColor":null,"secondaryButtonLabel":"Cancel","secondaryFontSize":null,"secondaryFontStyle":null,"secondaryFontColor":"#606190","footerAlignment":"right","status":"PUBLISHED","createdOn":1749708784521,"assignTo":0,"brandingTranslation":[{"language":"English","languageCode":"en","companyName":"Lorem Ipsum Technologies","primaryButtonLabel":"Submit","secondaryButtonLabel":"Cancel"},{"language":"Hindi","languageCode":"hi","companyName":"लोरेम इप्सम टेक्नोलॉजीज","primaryButtonLabel":"जमा करना","secondaryButtonLabel":"रद्द करना"},{"language":"Marathi","languageCode":"mr","companyName":"लोरेम इप्सम टेक्नॉलॉजीज","primaryButtonLabel":"सबमिट करा","secondaryButtonLabel":"रद्द करा"}],"primaryButtonbgColor":"#606190","primaryButtonborderColor":"#606190","secondaryButtonBgColor":"#ffff","secondaryButtonBorderColor":"#606190"};
+  const branding = {"id":"685ba94758591a56619e6196","name":"Testing Purpose","description":"","logo":"https://qa-hs.qhtpl.com/cpm-api/upload/v1/fileDownloads?fileUrl=hdfs://sdp-hdfs-namenode.hdfs.svc.cluster.local:9820/jars/1750838411997_logo.png","companyName":"Quick Heal","logoAlignment":"center","headerFontFamily":"Arial","headerFontSize":"Normal","headerFontColor":"#f44336","headerFontStyle":null,"primaryButtonLabel":"Submit","primaryFontSize":null,"primaryFontStyle":null,"primaryFontColor":"#f44336","primaryButtonColor":null,"secondaryButtonLabel":"Reject","secondaryFontSize":null,"secondaryFontStyle":null,"secondaryFontColor":"#f9fbe7","footerAlignment":"left","status":"PUBLISHED","createdOn":1750837575312,"assignTo":0,"brandingTranslation":[{"language":"English","languageCode":"en","companyName":"Quick Heal","primaryButtonLabel":"Submit","secondaryButtonLabel":"Reject"},{"language":"Telugu","languageCode":"te","companyName":"త్వరిత స్వస్థత","primaryButtonLabel":"సమర్పించండి","secondaryButtonLabel":"తిరస్కరించు"},{"language":"Gujarati","languageCode":"gu","companyName":"ઝડપી ઉપચાર","primaryButtonLabel":"સબમિટ કરો","secondaryButtonLabel":"નકારો"},{"language":"Nepali","languageCode":"ne","companyName":"छिटो निको","primaryButtonLabel":"पेश गर्नुहोस्","secondaryButtonLabel":"अस्वीकार गर्नुहोस्"}],"primaryButtonbgColor":"#fafafa","primaryButtonborderColor":"#404040","secondaryButtonBgColor":"#f44336","secondaryButtonBorderColor":"#404040"};
   const brandingTranslation = branding.brandingTranslation || [];
-  const permissions = [
-    {
-      id: "684a70d3be761974ae478e9d",
-      text: "<p>Would you like to receive email updates from us?</p>",
-      templateId: "684a6a8bbe761974ae478e56",
-      purposeId: "6846a058be761974ae478cb3",
-      defineOptions: true,
-      elementType: "RADIOBUTTON",
-      mandatory: true,
-      allowMultipleSelection: false,
-      options: [
-        "Yes, send me all updates, promotional emails and newsletters",
-        "Only send me important updates (e.g., account notices)",
-        "No, I do not want to receive any emails",
-      ],
-      permissionTranslation: [
-        {
-          language: "English",
-          languageCode: "en",
-          text: "<p>Would you like to receive email updates from us?</p>",
-          options: [
-            "Yes, send me all updates, promotional emails and newsletters",
-            "Only send me important updates (e.g., account notices)",
-            "No, I do not want to receive any emails",
-          ],
-        },
-        {
-          language: "Hindi",
-          languageCode: "hi",
-          text: "क्या आप हमसे ईमेल अपडेट प्राप्त करना चाहेंगे?",
-          options: [
-            "हां, मुझे सभी अपडेट, प्रचार ईमेल और समाचार पत्र भेजें",
-            "मुझे केवल महत्वपूर्ण अपडेट भेजें (जैसे, खाता सूचनाएँ)",
-            "नहीं, मैं कोई ईमेल प्राप्त नहीं करना चाहता",
-          ],
-        },
-        {
-          language: "Marathi",
-          languageCode: "mr",
-          text: "तुम्हाला आमच्याकडून ईमेल अपडेट्स मिळवायचे आहेत का?",
-          options: [
-            "हो, मला सर्व अपडेट्स, प्रमोशनल ईमेल आणि न्यूजलेटर पाठवा.",
-            "मला फक्त महत्त्वाचे अपडेट पाठवा (उदा., खाते सूचना)",
-            "नाही, मला कोणतेही ईमेल मिळवायचे नाहीत.",
-          ],
-        },
-      ],
-    },
-    {
-      id: "684a70d3be761974ae478e9e",
-      text: "<p>Do you agree to receive personalised ads based on your data?</p>",
-      templateId: "684a6a8bbe761974ae478e56",
-      purposeId: "6846a058be761974ae478cb3",
-      defineOptions: true,
-      elementType: "RADIOBUTTON",
-      mandatory: true,
-      allowMultipleSelection: false,
-      options: [
-        "Yes, personalize my ads and content",
-        "Only use limited data for non personalized ads",
-        "No, do not use my data for advertising",
-      ],
-      permissionTranslation: [
-        {
-          language: "English",
-          languageCode: "en",
-          text: "<p>Do you agree to receive personalised ads based on your data?</p>",
-          options: [
-            "Yes, personalize my ads and content",
-            "Only use limited data for non personalized ads",
-            "No, do not use my data for advertising",
-          ],
-        },
-        {
-          language: "Hindi",
-          languageCode: "hi",
-          text: "क्या आप अपने डेटा के आधार पर वैयक्तिकृत विज्ञापन प्राप्त करने के लिए सहमत हैं?",
-          options: [
-            "हां, मेरे विज्ञापनों और सामग्री को वैयक्तिकृत करें",
-            "गैर-वैयक्तिकृत विज्ञापनों के लिए केवल सीमित डेटा का उपयोग करें",
-            "नहीं, विज्ञापन के लिए मेरे डेटा का उपयोग न करें",
-          ],
-        },
-        {
-          language: "Marathi",
-          languageCode: "mr",
-          text: "तुमच्या डेटावर आधारित वैयक्तिकृत जाहिराती प्राप्त करण्यास तुम्ही सहमत आहात का?",
-          options: [
-            "हो, माझ्या जाहिराती आणि सामग्री वैयक्तिकृत करा",
-            "वैयक्तिकृत नसलेल्या जाहिरातींसाठी मर्यादित डेटा वापरा",
-            "नाही, माझा डेटा जाहिरातीसाठी वापरू नका.",
-          ],
-        },
-      ],
-    },
-    {
-      id: "684a70d3be761974ae478e9f",
-      text: "<p>What level of data collection are you comfortable with?</p>",
-      templateId: "684a6a8bbe761974ae478e56",
-      purposeId: "6846a058be761974ae478cb3",
-      defineOptions: true,
-      elementType: "RADIOBUTTON",
-      mandatory: true,
-      allowMultipleSelection: false,
-      options: [
-        "Full consent – collect and store all relevant data",
-        "Limited consent – only store what's needed for requested service",
-        "No consent – do not store my data beyond this session",
-      ],
-      permissionTranslation: [
-        {
-          language: "English",
-          languageCode: "en",
-          text: "<p>What level of data collection are you comfortable with?</p>",
-          options: [
-            "Full consent – collect and store all relevant data",
-            "Limited consent – only store what's needed for requested service",
-            "No consent – do not store my data beyond this session",
-          ],
-        },
-        {
-          language: "Hindi",
-          languageCode: "hi",
-          text: "डेटा संग्रहण के किस स्तर से आप सहज हैं?",
-          options: [
-            "पूर्ण सहमति - सभी प्रासंगिक डेटा एकत्रित और संग्रहीत करें",
-            "सीमित सहमति - केवल वही संग्रहित करें जो अनुरोधित सेवा के लिए आवश्यक है",
-            "कोई सहमति नहीं - इस सत्र से आगे मेरा डेटा संग्रहीत न करें",
-          ],
-        },
-        {
-          language: "Marathi",
-          languageCode: "mr",
-          text: "डेटा संकलनाच्या कोणत्या पातळीबद्दल तुम्हाला समाधान वाटते?",
-          options: [
-            "पूर्ण संमती - सर्व संबंधित डेटा गोळा आणि संग्रहित करा.",
-            "मर्यादित संमती - विनंती केलेल्या सेवेसाठी आवश्यक असलेलेच साठवा.",
-            "संमती नाही - या सत्राच्या पलीकडे माझा डेटा साठवू नका.",
-          ],
-        },
-      ],
-    },
-    {
-      id: "684a70d3be761974ae478ea0",
-      text: "<p><strong></strong>Can we share your data with our trusted partners?</p>",
-      templateId: "684a6a8bbe761974ae478e56",
-      purposeId: "6846a058be761974ae478cb3",
-      defineOptions: true,
-      elementType: "RADIOBUTTON",
-      mandatory: true,
-      allowMultipleSelection: false,
-      options: [
-        "Yes, share with third parties for offers and promotions",
-        "Only share with partners necessary for providing required service",
-        "Do not share my data with any third parties",
-      ],
-      permissionTranslation: [
-        {
-          language: "English",
-          languageCode: "en",
-          text: "<p><strong></strong>Can we share your data with our trusted partners?</p>",
-          options: [
-            "Yes, share with third parties for offers and promotions",
-            "Only share with partners necessary for providing required service",
-            "Do not share my data with any third parties",
-          ],
-        },
-        {
-          language: "Hindi",
-          languageCode: "hi",
-          text: "क्या हम आपका डेटा हमारे विश्वसनीय भागीदारों के साथ साझा कर सकते हैं?",
-          options: [
-            "हां, ऑफ़र और प्रमोशन के लिए तीसरे पक्ष के साथ साझा करें",
-            "केवल आवश्यक सेवा प्रदान करने के लिए आवश्यक भागीदारों के साथ साझा करें",
-            "मेरा डेटा किसी तीसरे पक्ष के साथ साझा न करें",
-          ],
-        },
-        {
-          language: "Marathi",
-          languageCode: "mr",
-          text: "आम्ही तुमचा डेटा आमच्या विश्वासू भागीदारांसोबत शेअर करू शकतो का?",
-          options: [
-            "हो, ऑफर आणि जाहिरातींसाठी तृतीय पक्षांसोबत शेअर करा",
-            "आवश्यक सेवा देण्यासाठी आवश्यक असलेल्या भागीदारांसहच शेअर करा",
-            "माझा डेटा कोणत्याही तृतीय पक्षांसोबत शेअर करू नका.",
-          ],
-        },
-      ],
-    },
-  ];
+  const permissions = [{"id":"686ce318208471114aa794e4","text":"<p><strong>I am agree with following terms and condition.</strong></p>","templateId":"6864d99b208471114aa7940c","purposeId":"685b9c0958591a56619e60ab","defineOptions":true,"elementType":"RADIOBUTTON","mandatory":true,"allowMultipleSelection":false,"options":["I accept the Terms and Conditions","I agree to receive email updates","I Reject the Terms and Conditions"],"permissionTranslation":[{"language":"English","languageCode":"en","text":"<p><strong>I am agree with following terms and condition.</strong></p>","options":["I accept the Terms and Conditions","I agree to receive email updates","I Reject the Terms and Conditions"]},{"language":"Telugu","languageCode":"te","text":"<p><strong>నేను ఈ క్రింది నిబంధనలు మరియు షరతులతో అంగీకరిస్తున్నాను.</strong></p>","options":["నేను నిబంధనలు మరియు షరతులను అంగీకరిస్తున్నాను.","నేను ఇమెయిల్ నవీకరణలను స్వీకరించడానికి అంగీకరిస్తున్నాను.","నేను నిబంధనలు మరియు షరతులను తిరస్కరిస్తున్నాను"]},{"language":"Gujarati","languageCode":"gu","text":"<p><strong>હું નીચેના નિયમો અને શરતો સાથે સંમત છું.</strong></p>","options":["હું નિયમો અને શરતો સ્વીકારું છું.","હું ઇમેઇલ અપડેટ્સ પ્રાપ્ત કરવા માટે સંમત છું.","હું નિયમો અને શરતોનો અસ્વીકાર કરું છું."]},{"language":"Nepali","languageCode":"ne","text":"<p><strong>म निम्न सर्तहरूसँग सहमत छु।</strong></p>","options":["म नियम र सर्तहरू स्वीकार गर्छु।","म इमेल अपडेटहरू प्राप्त गर्न सहमत छु।","म नियम र सर्तहरू अस्वीकार गर्छु।"]}]},{"id":"686ce318208471114aa794e5","text":"<p><strong>select below option:</strong></p>","templateId":"6864d99b208471114aa7940c","purposeId":"685b9c0958591a56619e60ab","defineOptions":true,"elementType":"CHECKBOX","mandatory":false,"allowMultipleSelection":false,"options":["Email","Phone","SMS","None Of the Above"],"permissionTranslation":[{"language":"English","languageCode":"en","text":"<p><strong>select below option:</strong></p>","options":["Email","Phone","SMS","None Of the Above"]},{"language":"Telugu","languageCode":"te","text":"<p><strong>క్రింద ఉన్న ఎంపికను ఎంచుకోండి:</strong></p>","options":["ఇ-మెయిల్","ఫోన్","ఎస్ఎంఎస్","పైవేవీ కావు"]},{"language":"Gujarati","languageCode":"gu","text":"<p><strong>નીચેનો વિકલ્પ પસંદ કરો:</strong></p>","options":["ઇમેઇલ","ફોન","એસએમએસ","ઉપરોક્તમાંથી કોઈ નહીં"]},{"language":"Nepali","languageCode":"ne","text":"<p><strong>तलको विकल्प छान्नुहोस्:</strong></p>","options":["इमेल","फोन","एसएमएस","माथिका कुनै पनि होइन"]}]},{"id":"686ce318208471114aa794e6","text":"<p><strong>Do you give consent to share your information?</strong></p>","templateId":"6864d99b208471114aa7940c","purposeId":"68305a85f5e5ed23b99ed836","defineOptions":true,"elementType":"DROPDOWN","mandatory":false,"allowMultipleSelection":false,"options":["Yes","No"],"permissionTranslation":[{"language":"English","languageCode":"en","text":"<p><strong>Do you give consent to share your information?</strong></p>","options":["Yes","No"]},{"language":"Telugu","languageCode":"te","text":"<p><strong>మీ సమాచారాన్ని పంచుకోవడానికి మీరు సమ్మతిస్తున్నారా?</strong></p>","options":["అవును","లేదు"]},{"language":"Gujarati","languageCode":"gu","text":"<p><strong>શું તમે તમારી માહિતી શેર કરવા માટે સંમતિ આપો છો?</strong></p>","options":["હા","ના"]},{"language":"Nepali","languageCode":"ne","text":"<p><strong>के तपाईं आफ्नो जानकारी साझा गर्न सहमति दिनुहुन्छ?</strong></p>","options":["हो","होइन"]}]}];
   const languageDropdown = document.getElementById("languageDropdown");
 
   function updateTranslations(lang) {
@@ -210,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
     permissions.forEach(permission => {
   const translation = permission.permissionTranslation.find(pt => pt.language.toLowerCase() === lang);
   const rawText = translation?.text || permission.text;
-  const text = rawText.trim(); // ✅ Keep styles like <span style="color:#d93f0b">
+  const text = rawText.trim(); 
 
   const options = translation?.options || permission.options || [];
 
@@ -221,9 +31,12 @@ document.addEventListener("DOMContentLoaded", function () {
   question.setAttribute('data-translate-text', permission.id);
 
      if (permission.mandatory) {
-        question.innerHTML = `${text} <span class="mandatory">*</span>`;
+        // question.innerHTML = `${text} <span class="mandatory">*</span>`;
+        question.innerHTML = `${decodeHtmlEntities(text)} <span class="mandatory">*</span>`;
+
       }  else {
-    question.innerHTML = text;
+        // question.innerHTML = text;
+        question.innerHTML = decodeHtmlEntities(text);
   }
 
   block.appendChild(question);
@@ -333,21 +146,29 @@ document.addEventListener("DOMContentLoaded", function () {
   // }
 
   function setDataPrincipleIdList() {
-  // const email =  document.getElementById('inputEmail').value;
-  const email =  'email';
-  let obj = {
-    key: 'email',
-    value: email
-  };
-  dataPrincipleIdList.push(obj);
+  //dataPrincipleIdList = [];
+  const email = document.getElementById('inputEmail').value;
+  const firstName = document.getElementById('inputFirstName').value;
+  const lastName = document.getElementById('inputLastName').value;
+  const phone = document.getElementById('inputPhone').value;
+  const address = document.getElementById('inputAddress').value;
+  if (email) dataPrincipleIdList.push({ key: 'email', value: email });
+  if (firstName) dataPrincipleIdList.push({ key: 'firstName', value: firstName });
+  if (lastName) dataPrincipleIdList.push({ key: 'lastName', value: lastName });
+  if (phone) dataPrincipleIdList.push({ key: 'phone', value: phone });
+  if (address) dataPrincipleIdList.push({ key: 'address', value: address });
 }
 
-
+function decodeHtmlEntities(html) {
+  const txt = document.createElement("textarea");
+  txt.innerHTML = html;
+  return txt.value;
+}
 
   function sendConsent() {
   const errorDiv = document.getElementById('error-message');
  
-  fetch('https://demo-shp.qhtpl.com/cpm-api/consent/v1/createOrUpdateConsent', {
+  fetch('https://qa-hs.qhtpl.com/cpm-api/consent/v1/createOrUpdateConsent', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ createConsentRequestDtoWrapper: createConsentRequestList })
@@ -361,14 +182,15 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
       showToast(data.statusMessage || 'Something went wrong.', 'error');
     }
-      } 
-    setTimeout(() => window.location.reload(), 1500);
+      } else {
+        // API returned error
+        // errorDiv.textContent = data.message || "Something went wrong. Please try again.";
+      }
     })
     .catch(err => {
       // Network error or other failure
          console.error(err);
     showToast('Failed to submit. Please check your network connection.', 'error');
-    setTimeout(() => window.location.reload(), 1500);
     });
 }
 
